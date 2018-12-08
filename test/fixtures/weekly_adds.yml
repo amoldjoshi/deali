@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  AddID: 1
+  AddName: MyString
+  AddCategory: MyString
+  IsAddFavorite?: false
+  AddTargetUrl: MyString
+
+two:
+  AddID: 1
+  AddName: MyString
+  AddCategory: MyString
+  IsAddFavorite?: false
+  AddTargetUrl: MyString

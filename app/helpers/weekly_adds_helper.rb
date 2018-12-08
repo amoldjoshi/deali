@@ -1,0 +1,2 @@
+module WeeklyAddsHelper
+end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  HunterID: 1
+  HunterName: MyString
+  HunterCategory: MyString
+  IsHunterFavorite?: false
+  HunterTargetUrl: MyString
+
+two:
+  HunterID: 1
+  HunterName: MyString
+  HunterCategory: MyString
+  IsHunterFavorite?: false
+  HunterTargetUrl: MyString

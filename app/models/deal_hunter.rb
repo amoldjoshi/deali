@@ -1,0 +1,2 @@
+class DealHunter < ApplicationRecord
+end

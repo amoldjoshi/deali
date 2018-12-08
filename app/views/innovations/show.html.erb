@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Innovationid:</strong>
+  <%= @innovation.InnovationID %>
+</p>
+
+<p>
+  <strong>Innovationname:</strong>
+  <%= @innovation.InnovationName %>
+</p>
+
+<p>
+  <strong>Innovationcategory:</strong>
+  <%= @innovation.InnovationCategory %>
+</p>
+
+<p>
+  <strong>Isinnovationfavorite?:</strong>
+  <%= @innovation.IsInnovationFavorite? %>
+</p>
+
+<p>
+  <strong>Innovationtargeturl:</strong>
+  <%= @innovation.InnovationTargetUrl %>
+</p>
+
+<%= link_to 'Edit', edit_innovation_path(@innovation) %> |
+<%= link_to 'Back', innovations_path %>

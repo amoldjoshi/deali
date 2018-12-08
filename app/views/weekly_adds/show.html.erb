@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Addid:</strong>
+  <%= @weekly_add.AddID %>
+</p>
+
+<p>
+  <strong>Addname:</strong>
+  <%= @weekly_add.AddName %>
+</p>
+
+<p>
+  <strong>Addcategory:</strong>
+  <%= @weekly_add.AddCategory %>
+</p>
+
+<p>
+  <strong>Isaddfavorite?:</strong>
+  <%= @weekly_add.IsAddFavorite? %>
+</p>
+
+<p>
+  <strong>Addtargeturl:</strong>
+  <%= @weekly_add.AddTargetUrl %>
+</p>
+
+<%= link_to 'Edit', edit_weekly_add_path(@weekly_add) %> |
+<%= link_to 'Back', weekly_adds_path %>

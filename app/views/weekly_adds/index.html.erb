@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Weekly Adds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Addid</th>
+      <th>Addname</th>
+      <th>Addcategory</th>
+      <th>Isaddfavorite?</th>
+      <th>Addtargeturl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weekly_adds.each do |weekly_add| %>
+      <tr>
+        <td><%= weekly_add.AddID %></td>
+        <td><%= weekly_add.AddName %></td>
+        <td><%= weekly_add.AddCategory %></td>
+        <td><%= weekly_add.IsAddFavorite? %></td>
+        <td><%= weekly_add.AddTargetUrl %></td>
+        <td><%= link_to 'Show', weekly_add %></td>
+        <td><%= link_to 'Edit', edit_weekly_add_path(weekly_add) %></td>
+        <td><%= link_to 'Destroy', weekly_add, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Weekly Add', new_weekly_add_path %>

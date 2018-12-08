@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@weekly_add) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :AddID %>
+    <%= f.input :AddName %>
+    <%= f.input :AddCategory %>
+    <%= f.input :IsAddFavorite? %>
+    <%= f.input :AddTargetUrl %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

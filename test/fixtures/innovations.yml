@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  InnovationID: 1
+  InnovationName: MyString
+  InnovationCategory: MyString
+  IsInnovationFavorite?: false
+  InnovationTargetUrl: MyString
+
+two:
+  InnovationID: 1
+  InnovationName: MyString
+  InnovationCategory: MyString
+  IsInnovationFavorite?: false
+  InnovationTargetUrl: MyString

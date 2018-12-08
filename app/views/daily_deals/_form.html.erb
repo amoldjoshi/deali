@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@daily_deal) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :DealerID %>
+    <%= f.input :DealerName %>
+    <%= f.input :DealerCategory %>
+    <%= f.input :IsDealerFavorite? %>
+    <%= f.input :DealerTargetUrl %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

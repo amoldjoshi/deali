@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dealerid:</strong>
+  <%= @daily_deal.DealerID %>
+</p>
+
+<p>
+  <strong>Dealername:</strong>
+  <%= @daily_deal.DealerName %>
+</p>
+
+<p>
+  <strong>Dealercategory:</strong>
+  <%= @daily_deal.DealerCategory %>
+</p>
+
+<p>
+  <strong>Isdealerfavorite?:</strong>
+  <%= @daily_deal.IsDealerFavorite? %>
+</p>
+
+<p>
+  <strong>Dealertargeturl:</strong>
+  <%= @daily_deal.DealerTargetUrl %>
+</p>
+
+<%= link_to 'Edit', edit_daily_deal_path(@daily_deal) %> |
+<%= link_to 'Back', daily_deals_path %>

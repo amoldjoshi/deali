@@ -1,0 +1,2 @@
+class DailyDeal < ApplicationRecord
+end

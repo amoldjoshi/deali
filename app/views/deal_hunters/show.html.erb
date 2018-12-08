@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hunterid:</strong>
+  <%= @deal_hunter.HunterID %>
+</p>
+
+<p>
+  <strong>Huntername:</strong>
+  <%= @deal_hunter.HunterName %>
+</p>
+
+<p>
+  <strong>Huntercategory:</strong>
+  <%= @deal_hunter.HunterCategory %>
+</p>
+
+<p>
+  <strong>Ishunterfavorite?:</strong>
+  <%= @deal_hunter.IsHunterFavorite? %>
+</p>
+
+<p>
+  <strong>Huntertargeturl:</strong>
+  <%= @deal_hunter.HunterTargetUrl %>
+</p>
+
+<%= link_to 'Edit', edit_deal_hunter_path(@deal_hunter) %> |
+<%= link_to 'Back', deal_hunters_path %>

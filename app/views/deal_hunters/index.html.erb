@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Deal Hunters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hunterid</th>
+      <th>Huntername</th>
+      <th>Huntercategory</th>
+      <th>Ishunterfavorite?</th>
+      <th>Huntertargeturl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @deal_hunters.each do |deal_hunter| %>
+      <tr>
+        <td><%= deal_hunter.HunterID %></td>
+        <td><%= deal_hunter.HunterName %></td>
+        <td><%= deal_hunter.HunterCategory %></td>
+        <td><%= deal_hunter.IsHunterFavorite? %></td>
+        <td><%= deal_hunter.HunterTargetUrl %></td>
+        <td><%= link_to 'Show', deal_hunter %></td>
+        <td><%= link_to 'Edit', edit_deal_hunter_path(deal_hunter) %></td>
+        <td><%= link_to 'Destroy', deal_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Deal Hunter', new_deal_hunter_path %>
