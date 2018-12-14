@@ -69,6 +69,6 @@ class DailyDealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def daily_deal_params
-      params.require(:daily_deal).permit(:DealerID, :DealerName, :DealerCategory, :IsDealerFavorite?, :DealerTargetUrl)
+      params.require(:daily_deal).permit(:DealerID, :DealerName, :DealerCategory, :IsDealerFavorite?, :DealerTargetUrl, :logo)
     end
 end

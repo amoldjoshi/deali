@@ -69,6 +69,6 @@ class DealHuntersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deal_hunter_params
-      params.require(:deal_hunter).permit(:HunterID, :HunterName, :HunterCategory, :IsHunterFavorite?, :HunterTargetUrl)
+      params.require(:deal_hunter).permit(:HunterID, :HunterName, :HunterCategory, :IsHunterFavorite?, :HunterTargetUrl, :logo)
     end
 end

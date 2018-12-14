@@ -69,6 +69,6 @@ class WeeklyAddsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def weekly_add_params
-      params.require(:weekly_add).permit(:AddID, :AddName, :AddCategory, :IsAddFavorite?, :AddTargetUrl)
+      params.require(:weekly_add).permit(:AddID, :AddName, :AddCategory, :IsAddFavorite?, :AddTargetUrl, :logo)
     end
 end

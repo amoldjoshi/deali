@@ -6,14 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 #Amol added following gems for bootstrap.
-gem 'bootstrap'
-gem 'jquery-rails'
-gem 'simple_form'
-gem 'popper_js'
-gem 'tether-rails'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'bootstrap', '~> 4.1', '>= 4.1.3'
+gem 'simple_form', '~> 4.1'
+gem 'popper_js', '~> 1.14', '>= 1.14.5'
+gem 'tether-rails', '~> 1.4'
 
-
-gem 'devise'
+gem 'devise', '~> 4.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2'
@@ -26,7 +25,7 @@ gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer', platforms: :ruby 
 # Amol added following gem 'cancancan'.  This is to authentical users.
 gem 'cancancan', '~> 2.0'
 # Amol added the following gem. 'will_paginate'
@@ -61,3 +60,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+group :development do
+  gem 'better_errors', '~> 2.5'
+  gem 'binding_of_caller', '~> 0.8.0'
+end
