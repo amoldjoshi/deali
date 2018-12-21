@@ -15,7 +15,9 @@
   </thead>
 
   <tbody>
+
     <% @weekly_adds.each do |weekly_add| %>
+     <div class="w3-card">
       <tr>
         <td><%= weekly_add.AddID %></td>
         <td><%= weekly_add.AddName %></td>
@@ -26,6 +28,7 @@
         <td><%= link_to 'Edit', edit_weekly_add_path(weekly_add) %></td>
         <td><%= link_to 'Destroy', weekly_add, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <div class="w3-card">
     <% end %>
   </tbody>
 </table>

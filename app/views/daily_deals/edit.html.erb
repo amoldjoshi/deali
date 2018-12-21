@@ -1,4 +1,10 @@
-<h1>Editing Daily Deal</h1>
+<%- model_class = DailyDeal -%>
+
+<div class="page-header">
+	<h1>
+		<%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %>
+	</h1>	
+</div>
 
 <%= render 'form', daily_deal: @daily_deal %>
 

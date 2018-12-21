@@ -11,8 +11,7 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'simple_form', '~> 4.1'
 gem 'popper_js', '~> 1.14', '>= 1.14.5'
 gem 'tether-rails', '~> 1.4'
-
-gem 'devise', '~> 4.5'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2'

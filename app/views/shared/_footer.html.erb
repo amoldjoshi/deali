@@ -1,0 +1,42 @@
+<div class="container">
+<nav class= "navbar-fixed-bottom navbar-inverse">
+   <div class="navbar-inner">
+			   
+		<div class="nav">  
+			<ul class="nav">
+				<div class = "span4">
+					<h4>
+						<%= link_to_unless_current "Home",     root_path %>!!
+				        <%= link_to_unless_current "About",	   root_path %>!!
+				        <%= link_to_unless_current "Contact",  root_path %>
+				    </h4>
+				</div>
+			        
+				<div class = "span8 text-right">
+	            	<%= image_tag("facebook.png", :size => "40x40", :alt => "peeHD.com")%>
+	                <%= image_tag("twitter.png",  :size => "40x40", :alt => "peeHD.com")%>
+	                <%= image_tag("google.png",   :size => "40x40", :alt => "peeHD.com")%>
+	                <%= image_tag("pinterest.png",:size => "40x40", :alt => "peeHD.com")%>
+	                <%= image_tag("mail.png",     :size => "40x40", :alt => "peeHD.com")%>
+	             </div>
+
+	          <div>  
+				<ul class="text-right">
+					<h4>
+					<%= link_to_unless_current "Home",   root_path %>!!
+				    <%= link_to_unless_current "About",	 root_path %>!!
+				    <%= link_to_unless_current "Contact",root_path %>!!
+				    <%if user_signed_in?%> Welcome: <%=current_user.email%>. Not you?
+				        <%=link_to "Sign out", destroy_user_session_path, :method => :delete %> 
+				        <%else%>
+				    <%=link_to "Sign up", new_user_registration_path%>!!
+				    <%=link_to "Sign in", new_user_session_path%>
+				        <%end%></h4>
+				</ul>
+		      </div><!--End container.-->
+
+		    </ul>
+	      </div><!--End container.-->
+	    </div><!-- nav var inner -->
+    </div>	<!--navbar.-->
+</div><!--End header.-->

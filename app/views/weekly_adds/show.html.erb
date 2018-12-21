@@ -1,8 +1,13 @@
+<%- model_class = WeeklyAdd -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 
 <div style="width:400px; height: auto">
-  <%= image_tag(@weekly_add.logo, style:'width:100%') %>
+  <%= image_tag(@weekly_add.logo, style:'width:50%') %>
 </div>
 
 <p>

@@ -1,4 +1,7 @@
-<h1>Editing Weekly Add</h1>
+<%- model_class = WeeklyAdd -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
 
 <%= render 'form', weekly_add: @weekly_add %>
 

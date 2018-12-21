@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
  
+  devise_for :users
+	
 	root to: 'innovations#index'
+  
   resources :deal_hunters
   resources :innovations
   resources :weekly_adds

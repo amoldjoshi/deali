@@ -221,7 +221,7 @@ DEPENDENCIES
   cancancan (~> 2.0)
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
-  devise (~> 4.5)
+  devise
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
   popper_js (~> 1.14, >= 1.14.5)
