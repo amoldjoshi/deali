@@ -1,35 +1,34 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = DailyDeal -%>
+ <div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+ </div>
 
-<h1>Daily Deals</h1>
+<div class="container">
 
-<table>
-  <thead>
-    <tr>
-      <th>Dealerid</th>
-      <th>Dealername</th>
-      <th>Dealercategory</th>
-      <th>Isdealerfavorite?</th>
-      <th>Dealertargeturl</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+ <p id="notice"><%= notice %></p>
 
-  <tbody>
+  <div class="row">
     <% @daily_deals.each do |daily_deal| %>
-      <tr>
-        <td><%= daily_deal.DealerID %></td>
-        <td><%= daily_deal.DealerName %></td>
-        <td><%= daily_deal.DealerCategory %></td>
-        <td><%= daily_deal.IsDealerFavorite? %></td>
-        <td><%= daily_deal.DealerTargetUrl %></td>
-        <td><%= link_to 'Show', daily_deal %></td>
-        <td><%= link_to 'Edit', edit_daily_deal_path(daily_deal) %></td>
-        <td><%= link_to 'Destroy', daily_deal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class = "col-md-2">
+        <div class = "logo-box">
+          <%= image_tag(daily_deal.logo, class: "logosize") %>
+          <ul>
+            <li><%= daily_deal.DealerName %></li> 
+            <li><%= daily_deal.DealerCategory %></li>
+            <li><%= daily_deal.IsDealerFavorite? %></li>
+            <li><%= daily_deal.DealerTargetUrl %></li>
+            <% if can? :update, daily_deal %>
+              <li><%= link_to 'Show', daily_deal %>
+                <%= link_to 'Edit', edit_daily_deal_path(daily_deal) %>
+                <%= link_to 'Destroy', daily_deal, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </li>
+            <%end%>
+          </ul>
+        </div><!--end div innovation box -->
+      </div><!--end div col-md-2 -->
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Daily Deal', new_daily_deal_path %>
+  </div><!--end row -->
+  <div>
+      <%= link_to 'New Weekly Add', new_daily_deal_path %>
+  </div>
+</div><!--Container-->

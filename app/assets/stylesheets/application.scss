@@ -1,26 +1,42 @@
 @import "/*";
 @import "bootstrap";
 @import "tether";
+
 .imagesize{
 	height: 150px;
 	width: 150px;
 }
 
-  body {
+.logosize{
+	height: 50px;
+	width: 50px;
+}
+
+body {
      margin: 0;
-     background: url(bg5.jpg);
+     background: url(bg7.jpg);
  }
 
- img.innovation-show{
- 	width: 600;
- 	height: auto;
- }
-
- .innovation-box{
-	height: 600px;
+ .newform-box{
+ 	border-style: groove; 
+ 	border-radius: 5px;
+	height: 500px;
 	position: relative;
 	box-shadow: 10px 10px 5px #888888;
 	background: #bdc3c7;
+ }
+
+ .innovation-box{
+	height: 400px;
+	position: relative;
+	box-shadow: 10px 10px 5px #888888;
+	background: #bdc3c7;
+ }
+
+ img.innovation-show{
+ 	width: 600px;
+ 	height: auto;
+ 	align: middle;
  }
 
  .innovation-box ul{
@@ -34,6 +50,28 @@
  }
 
   img.innovation-index {
+ 	width: 100%;
+ 	height: 80%;
+ 	object-fit: cover;
+ }
+
+ .logo-box{
+	height: 200px;
+	position: relative;
+	box-shadow: 10px 10px 5px #888888;
+	background: #bdc3c7;
+ }
+  .logo-box ul{
+ 	list-style-type: none;
+ 	position: absolute;
+ 	bottom: 0;
+ }
+
+  .logo-box li:first-child{
+ 	font-size: 24px;
+ }
+
+  img.logo-index {
  	width: 100%;
  	height: 80%;
  	object-fit: cover;
