@@ -1,4 +1,5 @@
 class WeeklyAddsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_weekly_add, only: [:show, :edit, :update, :destroy]
 
   # GET /weekly_adds

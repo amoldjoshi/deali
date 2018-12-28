@@ -1,4 +1,5 @@
 class DealHuntersController < ApplicationController
+  load_and_authorize_resource
   before_action :set_deal_hunter, only: [:show, :edit, :update, :destroy]
 
   # GET /deal_hunters

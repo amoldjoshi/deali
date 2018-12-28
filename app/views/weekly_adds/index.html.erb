@@ -9,20 +9,22 @@
     <% @weekly_adds.each do |weekly_add| %>
       <div class = "col-md-2">
         <div class = "logo-box">
-          <%= image_tag(weekly_add.logo, class: "logosize") %>
-          <ul>
-            <li><%= weekly_add.AddName %></li> 
-            <li><%= weekly_add.AddCategory %></li>
-            <li><%= weekly_add.IsAddFavorite? %></li>
-            <li><%= weekly_add.AddTargetUrl %></li>
+          <%= image_tag(weekly_add.logo, class: 'fit-image') %>
+           <div class="container">
+            <h5><%= weekly_add.AddName %></h5> 
+            <p><%= weekly_add.AddCategory %></p>
+            <p><%= weekly_add.IsAddFavorite? %></p>
+            <p><%=  link_to('Lets Go!', url_with_protocol(weekly_add.AddTargetUrl),:target => :blank, :class => 'btn btn-warning')%></p>
+          </div><!--container-->
+            <ul>
             <% if can? :update, weekly_add %>
               <li><%= link_to 'Show', weekly_add %>
                 <%= link_to 'Edit', edit_weekly_add_path(weekly_add) %>
                 <%= link_to 'Destroy', weekly_add, method: :delete, data: { confirm: 'Are you sure?' } %>
               </li>
             <%end%>
-          </ul>
-        </div><!--end div innovation box -->
+            </ul>
+        </div><!--end div logobox. -->
       </div><!--end div col-md-2 -->
     <% end %>
   </div><!--end row -->

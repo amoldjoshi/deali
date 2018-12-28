@@ -11,12 +11,14 @@
     <% @daily_deals.each do |daily_deal| %>
       <div class = "col-md-2">
         <div class = "logo-box">
-          <%= image_tag(daily_deal.logo, class: "logosize") %>
-          <ul>
-            <li><%= daily_deal.DealerName %></li> 
-            <li><%= daily_deal.DealerCategory %></li>
-            <li><%= daily_deal.IsDealerFavorite? %></li>
-            <li><%= daily_deal.DealerTargetUrl %></li>
+          <%= image_tag(daily_deal.logo, class: 'fit-image') %>
+           <div class="container">
+            <h5><%= daily_deal.DealerName %></h5> 
+            <p><%= daily_deal.DealerCategory %></p>
+            <p><%= daily_deal.IsDealerFavorite? %></p>
+            <p><%=  link_to('Lets Go!', url_with_protocol(daily_deal.DealerTargetUrl),:target => :blank, :class => 'btn btn-warning')%></p>
+           </div><!--container-->
+           <ul>
             <% if can? :update, daily_deal %>
               <li><%= link_to 'Show', daily_deal %>
                 <%= link_to 'Edit', edit_daily_deal_path(daily_deal) %>

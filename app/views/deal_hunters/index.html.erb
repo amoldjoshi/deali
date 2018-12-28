@@ -9,12 +9,14 @@
     <% @deal_hunters.each do |deal_hunter| %>
       <div class = "col-md-2">
         <div class = "logo-box">
-          <%= image_tag(deal_hunter.logo, class: "logosize") %>
-          <ul>
-            <li><%= deal_hunter.HunterName %></li> 
-            <li><%= deal_hunter.HunterCategory %></li>
-            <li><%= deal_hunter.IsHunterFavorite? %></li>
-            <li><%= deal_hunter.HunterTargetUrl %></li>
+          <%= image_tag(deal_hunter.logo, class: 'fit-image') %>
+           <div class="container">
+            <h5><%= deal_hunter.HunterName %></h5> 
+            <p><%= deal_hunter.HunterCategory %></p>
+            <p><%= deal_hunter.IsHunterFavorite? %></p>
+            <p><%=  link_to('Lets Go!', url_with_protocol(deal_hunter.HunterTargetUrl),:target => :blank, :class => 'btn btn-warning')%></p>
+           </div><!--container-->
+            <ul>
             <% if can? :update, deal_hunter %>
               <li><%= link_to 'Show', deal_hunter %>
                 <%= link_to 'Edit', edit_deal_hunter_path(deal_hunter) %>
