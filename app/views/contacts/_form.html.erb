@@ -1,0 +1,20 @@
+
+<%= simple_form_for(@contact) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+ <div class="newform-box">
+  <div class = "container">
+    <div class="form-inputs">
+      <%= f.input :Question %>
+      <%= f.input :Answer %>
+      <%= f.input :Email %>
+    </div>
+  </div><!--end container-->
+ </div><!--end newform-box input-->
+
+ <div class="form-actions">
+  <%= f.button :submit %>
+ </div>
+
+<% end %>

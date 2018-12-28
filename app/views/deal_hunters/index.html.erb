@@ -20,7 +20,8 @@
             <% if can? :update, deal_hunter %>
               <li><%= link_to 'Show', deal_hunter %>
                 <%= link_to 'Edit', edit_deal_hunter_path(deal_hunter) %>
-                <%= link_to 'Destroy', deal_hunter, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Destroy', deal_hunter, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New Deal Hunter', new_deal_hunter_path %>
               </li>
             <%end%>
           </ul>
@@ -29,6 +30,6 @@
     <% end %>
   </div><!--end row -->
   <div>
-      <%= link_to 'New Deal Hunter', new_deal_hunter_path %>
+      
   </div>
 </div><!--Container-->

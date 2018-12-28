@@ -22,7 +22,8 @@
           <% if can? :update, innovation %>
             <li><%= link_to 'Show', innovation %> ||
                 <%= link_to 'Edit', edit_innovation_path(innovation) %> ||
-                <%= link_to 'Destroy', innovation, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <%= link_to 'Destroy', innovation, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New Innovation', new_innovation_path %>
             </li>
           <% end %>
         </ul>
@@ -31,7 +32,5 @@
   <% end %>
  </div><!--end row -->
 
- <div>
-   <%= link_to 'New Innovation', new_innovation_path %>
- </div>
+
 </div><!--finished container-->

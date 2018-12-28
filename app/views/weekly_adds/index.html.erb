@@ -18,9 +18,10 @@
           </div><!--container-->
             <ul>
             <% if can? :update, weekly_add %>
-              <li><%= link_to 'Show', weekly_add %>
-                <%= link_to 'Edit', edit_weekly_add_path(weekly_add) %>
-                <%= link_to 'Destroy', weekly_add, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <li><%= link_to 'Show', weekly_add %>||
+                <%= link_to 'Edit', edit_weekly_add_path(weekly_add) %>||
+                <%= link_to 'Destroy', weekly_add, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New Weekly Add', new_weekly_add_path %>
               </li>
             <%end%>
             </ul>
@@ -29,6 +30,6 @@
     <% end %>
   </div><!--end row -->
   <div>
-      <%= link_to 'New Weekly Add', new_weekly_add_path %>
+      
   </div>
 </div><!--Container-->

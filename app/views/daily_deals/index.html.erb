@@ -20,9 +20,10 @@
            </div><!--container-->
            <ul>
             <% if can? :update, daily_deal %>
-              <li><%= link_to 'Show', daily_deal %>
-                <%= link_to 'Edit', edit_daily_deal_path(daily_deal) %>
-                <%= link_to 'Destroy', daily_deal, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <li><%= link_to 'Show', daily_deal %>||
+                <%= link_to 'Edit', edit_daily_deal_path(daily_deal) %>||
+                <%= link_to 'Destroy', daily_deal, method: :delete, data: { confirm: 'Are you sure?' } %>||
+                <%= link_to 'New Weekly Add', new_daily_deal_path %>
               </li>
             <%end%>
           </ul>
@@ -31,6 +32,6 @@
     <% end %>
   </div><!--end row -->
   <div>
-      <%= link_to 'New Weekly Add', new_daily_deal_path %>
+      
   </div>
 </div><!--Container-->

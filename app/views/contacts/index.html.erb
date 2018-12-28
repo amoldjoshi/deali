@@ -1,0 +1,31 @@
+<%- model_class = Contact -%>
+
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <% @contacts.each do |contact| %>
+    <div class = "col-md-5">
+      <div class="card bg-light mb-3" style="max-width: 35 rem; opacity: 0.8;">
+        <div class="container">
+          <h5 class="card-header"><%= contact.Question %></h5>
+          <p class="card-text"><%= contact.Answer %></p>
+          <p class="card-text"><%= contact.Email %></p>
+
+          <% if can? :update, contact %>
+            <p><%= link_to 'Show', contact %></p>
+            <p><%= link_to 'Edit', edit_contact_path(contact) %></p>
+            <p><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <%end%>
+        </div><!--end container-->
+      </div><!--end card-->
+    </div><!--col 5-->
+  <% end %>
+</div><!--end row-->
+
+<br>
+<div>
+<%= link_to 'New Contact', new_contact_path %>
+</div>

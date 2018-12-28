@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  resources :contacts
+  resources :abouts
   devise_for :users
 	
 	root to: 'innovations#index'
