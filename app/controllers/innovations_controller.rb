@@ -70,6 +70,6 @@ class InnovationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def innovation_params
-      params.require(:innovation).permit(:InnovationID, :InnovationName, :InnovationCategory, :IsInnovationFavorite?, :InnovationTargetUrl, :image)
+      params.require(:innovation).permit(:InnovationID, :InnovationName, :InnovationCategory, :IsInnovationFavorite?, :description, :price, :InnovationTargetUrl, :image)
     end
 end

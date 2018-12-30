@@ -14,10 +14,9 @@
         <%= image_tag(innovation.image, class: 'fit-image') %>
         </picture>
           <ul>
-            <li><%= innovation.InnovationName %></li>
-            <li><%= innovation.InnovationID %></li>
-            <li><%= innovation.InnovationCategory %></li>
-            <li><%= innovation.IsInnovationFavorite? %></li>
+            <li><%= innovation.InnovationName %> for <%= number_to_currency(innovation.price, :unit => "$")%></li>
+            <li><%= innovation.description %></li>
+            <div class="dropdown-divider"></div>
             <li><%=  link_to('Lets Go!', url_with_protocol(innovation.InnovationTargetUrl),:target => :blank, :class => 'btn btn-warning')%></li>
           <% if can? :update, innovation %>
             <li><%= link_to 'Show', innovation %> ||

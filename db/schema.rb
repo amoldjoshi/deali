@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_28_073253) do
+ActiveRecord::Schema.define(version: 2018_12_30_030943) do
 
   create_table "abouts", force: :cascade do |t|
     t.text "question"
@@ -76,6 +76,8 @@ ActiveRecord::Schema.define(version: 2018_12_28_073253) do
     t.string "InnovationTargetUrl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
+    t.decimal "price", precision: 5, scale: 2
   end
 
   create_table "users", force: :cascade do |t|
