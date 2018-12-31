@@ -17,7 +17,7 @@
             <li><%= link_to(innovation.InnovationName, url_with_protocol(innovation.InnovationTargetUrl),:target => :blank) %></li>
             <li><p  padding-top: 10%;><%= innovation.description %></p></li>
             <div class="dropdown-divider"></div>
-            <li><%=  link_to('Lets Go!', url_with_protocol(innovation.InnovationTargetUrl),:target => :blank, :class => 'btn btn-warning')%><div class="float-right"><font size="3" color = "blue"><%= number_to_currency(innovation.price, :unit => "$")%></font></div></li>
+            <li><%=  link_to('Lets Go!', url_with_protocol(innovation.InnovationTargetUrl),:target => :blank, :class => 'btn btn-warning')%><div class="float-right"><font size="3" color = #0000FF><%= number_to_currency(innovation.price, :unit => "$")%></font></div></li>
           <% if can? :update, innovation %>
             <li><%= link_to 'Show', innovation %> ||
                 <%= link_to 'Edit', edit_innovation_path(innovation) %> ||
