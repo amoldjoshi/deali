@@ -29,7 +29,7 @@ body {
  }
 
  img.innovation-show{
- 	width: 600px;
+ 	width: 800px;
  	height: auto;
  	align: middle;
  }
@@ -41,7 +41,12 @@ body {
  }
 
   .innovation-box li:first-child{
- 	font-size: 24px;
+ 	font-size: 20px;
+   line-height: 20px;
+ }
+
+  .innovation-box li{
+  margin-right: .5em;
  }
 
   img.innovation-index {
@@ -83,14 +88,18 @@ body {
      -moz-border-radius: 6px !important;
      font-size: 1.3em !important;
      background-color: #ffffff;
-     opacity: .8;
+     opacity: .6;
  }
 
 .nav a{
-    color: grey !important;
+    color: black !important;
     font-size: 1.3em !important;
     }
 
 .nav li{
     padding-right:5px;
    }
+
+.nav a:hover{
+  background-color:#F2F2F2 !important;
+}

@@ -1,8 +1,11 @@
 <%- model_class = DealHunter -%>
+
 <div class="container">
- <div class="page-header">
-    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
- </div>
+  <div class="card bg-light mb-3" style="max-width: 200 rem; opacity: 0.8;">
+    <h4 class="card-header"><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h4><br>
+    <p style="margin-left: 2.5em">Keep this open. Click 'Lets go!'. Browse and come back for next one.</p>
+  </div>
+
  <p id="notice"><%= notice %></p>
 
   <div class="row">
@@ -11,9 +14,10 @@
         <div class = "logo-box">
           <%= image_tag(deal_hunter.logo, class: 'fit-image') %>
            <div class="container">
-            <h5><%= deal_hunter.HunterName %></h5> 
+            <h5><%= link_to  deal_hunter.HunterName, url_with_protocol(deal_hunter.HunterTargetUrl),:target => :blank %><%=  %></h5> 
             <p><%= deal_hunter.HunterCategory %></p>
             <p><%= deal_hunter.IsHunterFavorite? %></p>
+            <div class="dropdown-divider"></div>
             <p><%=  link_to('Lets Go!', url_with_protocol(deal_hunter.HunterTargetUrl),:target => :blank, :class => 'btn btn-warning')%></p>
            </div><!--container-->
             <ul>

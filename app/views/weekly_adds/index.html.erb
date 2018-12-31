@@ -1,8 +1,11 @@
 <%- model_class = WeeklyAdd -%>
 <div class="container">
- <div class="page-header">
-    <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
- </div>
+
+  <div class="card bg-light mb-3" style="max-width: 200 rem; opacity: 0.8;">
+    <h4 class="card-header"><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h4><br>
+    <p style="margin-left: 2.5em">Keep this tab open. Click 'Lets go!'. New tab with weekly paper opens. Come back here for your next add paper.</p>
+  </div>
+
  <p id="notice"><%= notice %></p>
 
   <div class="row">
@@ -11,9 +14,10 @@
         <div class = "logo-box">
           <%= image_tag(weekly_add.logo, class: 'fit-image') %>
            <div class="container">
-            <h5><%= weekly_add.AddName %></h5> 
+            <h5><%= link_to weekly_add.AddName, url_with_protocol(weekly_add.AddTargetUrl),:target => :blank %></h5> 
             <p><%= weekly_add.AddCategory %></p>
             <p><%= weekly_add.IsAddFavorite? %></p>
+            <div class="dropdown-divider"></div>
             <p><%=  link_to('Lets Go!', url_with_protocol(weekly_add.AddTargetUrl),:target => :blank, :class => 'btn btn-warning')%></p>
           </div><!--container-->
             <ul>
