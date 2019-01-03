@@ -18,14 +18,10 @@
             <p><%= link_to 'Show', contact %></p>
             <p><%= link_to 'Edit', edit_contact_path(contact) %></p>
             <p><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <p><%= link_to 'New Contact', new_contact_path %></p>
           <%end%>
         </div><!--end container-->
       </div><!--end card-->
     </div><!--col 5-->
   <% end %>
 </div><!--end row-->
-
-<br>
-<div>
-<%= link_to 'New Contact', new_contact_path %>
-</div>

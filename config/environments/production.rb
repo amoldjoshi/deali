@@ -89,7 +89,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  #Amol added following to see the images on the heroku server. 
+  #Amol added following to see the images on the heroku server.  Following 4 lines, showed the background. I am keeping it.
   config.cache_classes = true
   config.serve_static_assets = true
   config.assets.compile = true

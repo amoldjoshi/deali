@@ -1,25 +1,24 @@
 <%- model_class = WeeklyAdd -%>
-<div class="container">
-
-  <div class="card bg-light mb-3" style="max-width: 200 rem; opacity: 0.8;">
-    <h4 class="card-header"><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h4><br>
-    <p style="margin-left: 2.5em">Keep this tab open. Click 'Lets go!'. New tab with weekly paper opens. Come back here for your next add paper.</p>
-  </div>
+<div class="container-fluid">
 
  <p id="notice"><%= notice %></p>
 
   <div class="row">
-    <% @weekly_adds.each do |weekly_add| %>
+    <div class="col-md-3">
+      <%= render 'shared/temp'%>
+    </div>
+
+  <% @weekly_adds.each do |weekly_add| %>
       <div class = "col-md-2">
         <div class = "logo-box">
           <%= image_tag(weekly_add.logo, class: 'fit-image') %>
            <div class="container">
-            <h5><%= link_to weekly_add.AddName, url_with_protocol(weekly_add.AddTargetUrl),:target => :blank %></h5> 
+            <h5><%= link_to weekly_add.AddName, url_with_protocol(weekly_add.AddTargetUrl),:target => :blank %></h5>
             <p><%= weekly_add.AddCategory %></p>
-            <p><%= weekly_add.IsAddFavorite? %></p>
             <div class="dropdown-divider"></div>
-            <p><%=  link_to('Lets Go!', url_with_protocol(weekly_add.AddTargetUrl),:target => :blank, :class => 'btn btn-warning')%></p>
-          </div><!--container-->
+            <p<%=  link_to('Lets Go!', url_with_protocol(weekly_add.AddTargetUrl),:target => :blank, :class => 'btn btn-warning')%></div></p>
+            
+           </div><!--container-->
             <ul>
             <% if can? :update, weekly_add %>
               <li><%= link_to 'Show', weekly_add %>||
@@ -33,7 +32,4 @@
       </div><!--end div col-md-2 -->
     <% end %>
   </div><!--end row -->
-  <div>
-      
-  </div>
-</div><!--Container-->
+</div><!--container-fluid-->

@@ -17,14 +17,10 @@
             <p><%= link_to 'Show', about %></p>
             <p><%= link_to 'Edit', edit_about_path(about) %></p>
             <p><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <p><%= link_to 'New About', new_about_path %></p>
           <%end%>
         </div>
       </div>
     </div>
   <% end %>
-</div>
-
-<br>
-<div>
-<%= link_to 'New About', new_about_path %>
 </div>
