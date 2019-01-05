@@ -4,11 +4,7 @@
 <p id="notice"><%= notice %></p>
 
   <div class="row">
-    <div class="col-md-3">
-      <%= render 'shared/temp'%>
-    </div>
-
-    <% @daily_deals.each do |daily_deal| %>
+      <% @daily_deals.each do |daily_deal| %>
       <div class = "col-md-2">
         <div class = "logo-box">
           <%= image_tag(daily_deal.logo, class: 'fit-image') %>

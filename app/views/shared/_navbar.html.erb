@@ -1,6 +1,6 @@
-<div class="fixed-top">
+
   <div class="container-fluid">
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
   <!--<a class="navbar-brand" href="#">DEalibaba.com</a>-->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,19 +12,18 @@
             <% logo = image_tag("dealibabalogo.png", :alt => "dealibaba.com") %>
             <%= link_to logo, root_path %>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a><%=  link_to_unless_current 'Innovations', root_path %></a>
-              <div class="dropdown-divider"></div>
-              <a><%=  link_to_unless_current 'Weekly Adds', weekly_adds_path %></a>
-              <div class="dropdown-divider"></div>
-              <a><%=  link_to_unless_current 'Daily Deals', daily_deals_path %></a>
-              <div class="dropdown-divider"></div>
-              <a><%=  link_to_unless_current 'Deal Hunters', deal_hunters_path %></a>
-            </div>
+          <li class="nav-item ">
+            <%= link_to 'Innovations', root_path, class: 'navbar-brand' %>
           </li>
-
+          <li class="nav-item">
+            <%= link_to 'Weekly Adds', weekly_adds_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Daily Deals', daily_deals_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Deal Hunters', deal_hunters_path, class: 'navbar-brand' %>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Links</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -52,5 +51,4 @@
       </ul>
     </div>
   </nav>
-</div>
 </div>

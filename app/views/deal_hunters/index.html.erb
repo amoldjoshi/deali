@@ -2,11 +2,6 @@
 <div class="container-fluid">
  <p id="notice"><%= notice %></p>
 
-  <div class="row">
-    <div class="col-md-3">
-      <%= render 'shared/temp'%>
-    </div>
-
     <% @deal_hunters.each do |deal_hunter| %>
       <div class = "col-md-2">
         <div class = "logo-box">
@@ -29,5 +24,4 @@
         </div><!--end div innovation box -->
       </div><!--end div col-md-2 -->
     <% end %>
-  </div><!--end row -->
 </div><!--Container-->
