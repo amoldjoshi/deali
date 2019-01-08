@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg sticky-bottom navbar-dark">
+<nav class="navbar navbar-expand-lg sticky-bottom navbar-dark bg-dark">
   <!--<a class="navbar-brand" href="#">DEalibaba.com</a>-->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,21 +8,28 @@
     <ul class="nav nav-pills">
       <li class="nav-item active">
         <li class="nav-item">
-          <a class="nav-link" href="#">
-            DEalibaba.com</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <%=  link_to_unless_current 'Innovations', root_path %></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <%=  link_to_unless_current 'About', abouts_path %></a>
-        </li>
           <li class="nav-item">
-          <a class="nav-link" href="#">
-            <%=  link_to_unless_current 'Contact', contacts_path %></a>
-        </li>
+            <% logo = image_tag("dealibabalogo.png", :alt => "dealibaba.com") %>
+            <%= link_to logo, root_path %>
+          </li>
+          <li class="nav-item ">
+            <%= link_to 'Innovations', root_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Weekly Adds', weekly_adds_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Daily Deals', daily_deals_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Deal Hunters', deal_hunters_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'About', abouts_path, class: 'navbar-brand' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Contact', contacts_path, class: 'navbar-brand' %>
+          </li>
       </li>
 
       <div class = "span8 text-right">
