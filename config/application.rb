@@ -2,6 +2,9 @@ require_relative 'boot'
 
 require 'rails/all'
 
+#Amol added following line for active storage feb 3,19.
+require "active_storage" 
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
